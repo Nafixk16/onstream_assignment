@@ -1,38 +1,94 @@
-.App {
+body {
+  background-color: rgb(243, 242, 242);
+}
+canvas {
+  /* border: 2px solid rgb(3, 3, 3); */
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  background-color: white;
+}
+
+.video-straming-wrapper {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+}
+.video-player {
+  /* border: 1px solid red; */
+  height: 50%;
+  padding: 20px;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.video-list {
+  /* border: 1px solid rgb(0, 0, 0); */
+  height: 160px;
+  width: 100%;
+  text-align: center;
+}
+.cover-img {
+  width: 190px;
+  height: 100%;
+  margin-right: 10px;
+  cursor: pointer;
+}
+.cover-img:hover {
+  
+}
+.video-btns {
+  text-align: center;
+  padding: 20px;
+}
+.video-btns button {
+  margin-right: 5px;
+  cursor: pointer;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+/* Ripple effect */
+.ripple {
+  background-position: center;
+  transition: background 0.8s;
+}
+.ripple:hover {
+  background: #47a7f5 radial-gradient(circle, transparent 1%, #47a7f5 1%)
+    center/15000%;
+}
+.ripple:active {
+  background-color: #6eb9f7;
+  background-size: 100%;
+  transition: background 0s;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+/* Button style */
+button {
+  border: none;
+  border-radius: 2px;
+  padding: 12px 18px;
+  font-size: 16px;
+  text-transform: uppercase;
+  cursor: pointer;
   color: white;
+  background-color: #2196f3;
+  box-shadow: 0 0 4px #999;
+  outline: none;
 }
 
-.App-link {
-  color: #61dafb;
+.loader {
+  position: absolute;
+  border: 10px solid #9e9d9d; /* Light grey */
+  border-top: 10px solid #3498db; /* Blue */
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  animation: spin 2s linear infinite;
+  margin-left: 47%;
+  margin-top: 12%;
 }
 
-@keyframes App-logo-spin {
-  from {
+@keyframes spin {
+  0% {
     transform: rotate(0deg);
   }
-  to {
+  100% {
     transform: rotate(360deg);
   }
 }
