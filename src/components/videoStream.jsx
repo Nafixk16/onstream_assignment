@@ -146,7 +146,7 @@ class VideoStream extends React.Component {
               src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSL6liI8rWc1cpaMAIOzRVI9KXljFaGhEQM4w&usqp=CAU"
               onClick={() =>
                 this.onVideoClick(
-                  "https://www.learningcontainer.com/wp-content/uploads/2020/05/sample-mp4-file.mp4",
+                  "https://www.w3schools.com/html/mov_bbb.ogg",
                   "play1"
                 )
               }
